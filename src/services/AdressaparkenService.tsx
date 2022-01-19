@@ -8,10 +8,10 @@ import qs from 'qs';
  * Credentials for authentication are to be found in the config.js file.
  */
 class AdressaparkenService {
-    getSensorData(): any {
+    getSensorData(sensorName: string): any {
         return new Promise((resolve, reject) => {
 
-            fetch('https://api.adressaparken.no/v1/sensorDataList?sensor=tc&limit=10&offset=0', {
+            fetch('https://api.adressaparken.no/v1/sensorDataList?sensor='+sensorName+'&limit=10&offset=0', {
                 method: 'GET',
                 headers: {
 

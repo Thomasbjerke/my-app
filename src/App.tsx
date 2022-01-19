@@ -5,7 +5,7 @@ import AdressaparkenService from "./services/AdressaparkenService";
 
 function App() {
   let adressaparkenService = new AdressaparkenService();
-  adressaparkenService.getSensorData().then((res: any) => {
+  adressaparkenService.getSensorData("tc").then((res: any) => {
     console.log(res);
     console.log(res[0].value);
   });
